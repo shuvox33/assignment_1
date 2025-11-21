@@ -5,25 +5,27 @@ TypeScript এ keyof কোনো অবজেক্ট টাইপের স�
 
 Example:
 
+```ts
 type User = {
-name: string;
-age: number;
-email: string;
+  name: string;
+  age: number;
+  email: string;
 };
 
 type UserKeys = keyof User;
 
 function getUserProperty(user: User, key: UserKeys) {
-return user[key];
+  return user[key];
 }
 
 const person: User = {
-name: "Shakib",
-age: 25,
-email: "shakib@test.com",
+  name: "Shakib",
+  age: 25,
+  email: "shakib@test.com",
 };
 
 console.log(getUserProperty(person, "email"));
+```
 
 Answer of question number 4:
 
@@ -31,25 +33,29 @@ Union Type : Union টাইপ মানে হলো একটি ভ্যা
 
 Example:
 
+```ts
 function printValue(value: string | number) {
-console.log("Value:", value);
+  console.log("Value:", value);
 }
 
 printValue("Hello");
 printValue(123);
+```
 
 Intersection Type : Intersection টাইপ মানে হলো একাধিক টাইপকে মিলিয়ে একটি টাইপ তৈরি করা, এবং সেই নতুন টাইপে সবগুলোর প্রপার্টি থাকতে হবে।
 
 Example:
 
+```ts
 type Address = {
-city: string;
+  city: string;
 };
 
 type FullUser = Name & Age & Address;
 
 const fullInfo: FullUser = {
-name: "Arif",
-age: 30,
-city: "Dhaka",
+  name: "Arif",
+  age: 30,
+  city: "Dhaka",
 };
+```
